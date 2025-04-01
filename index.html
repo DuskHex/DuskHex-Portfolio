@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio - DuskHex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="welcome-section">
+    <h1 id="hero-title">DuskHex - Diana Yukhymovych</h1>
+    <p class="intro">Developer | Designer | Creator</p>
+  </section>
+
+  <!-- About Me Section -->
+<section id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am <strong>DuskHex</strong>, a developer, designer, and creator. Passionate about blending logic and artistry, I craft innovative solutions that push the boundaries of technology. With a love for dark academia and a sharp sense of wit, I strive to create experiences that are both elegant and powerful, driven by intellect and creativity.</p>
+        </div>
+        <div class="about-photo">
+            <!-- My Photo -->
+            <img src="https://i.imgur.com/tJ5YdES.jpeg" alt="Your Photo">
+        </div>
+    </div>
+</section>
+
+  <!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-container">
+    <div class="project-tile">
+      <img src="https://i.imgur.com/SDGAdIP.jpeg" alt="Cat Lover Survey Form">
+      <h3>Survey Form</h3>
+      <p>A simple, interactive survey form designed for cat lovers to share their experiences, preferences, and opinions about cats.</p>
+      <a href="https://github.com/DuskHex/Cat-Lover-Survey-Form" target="_blank" class="btn">View on GitHub</a>
+    </div>
+    <div class="project-tile">
+      <img src="https://i.imgur.com/eWe8pdl.jpeg" alt="Memorial Page of Bertrand Russell">
+      <h3>Memorial Page</h3>
+      <p>A tribute page dedicated to the life and contributions of Bertrand Russell, designed with HTML and CSS.</p>
+      <a href="https://github.com/DuskHex/Memorial-Page-of-Bertrand-Russell" target="_blank" class="btn">View on GitHub</a>
+    </div>
+    <div class="project-tile">
+      <img src="https://i.imgur.com/YtmGnIF.jpeg" alt="Python Documentation Webpage">
+      <h3>Python Documentation</h3>
+      <p>A simple static webpage that provides detailed documentation for Python programming. </p>
+      <a href="https://github.com/DuskHex/Python-Documentation-Webpage" target="_blank" class="btn">View on GitHub</a>
+    </div>
+    <div class="project-tile">
+      <img src="https://i.imgur.com/vn3LXoy.jpeg" alt="MISSHA Cushion Landing Page">
+      <h3>Landing Page</h3>
+      <p>A responsive landing page showcasing the MISSHA Velvet Finish Cushion with features, video demonstration, pricing options, and a sign-up form.</p>
+      <a href="https://github.com/DuskHex/MISSHA-Cushion-Landing-Page" target="_blank" class="btn">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram"></a>
+      <a href="https://youtube.com" target="_blank"><img src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000" alt="YouTube"></a>
+      <a href="https://tiktok.com" target="_blank"><img src="https://img.icons8.com/?size=100&id=118640&format=png&color=000000" alt="TikTok"></a>
+      <a id="profile-link" href="https://github.com" target="_blank"><img src="https://img.icons8.com/?size=100&id=I4pr4aLqgxbI&format=png&color=000000" alt="GitHub"></a>
+    </div>
+    <p>Email: <a href="mailto:d.duskhex@gmail.com">d.duskhex@gmail.com</a></p>
+    <p>DuskHex © 2025 All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth fade-in effect for the hero title
+    const heroTitle = document.querySelector("#hero-title");
+    heroTitle.style.opacity = 0;
+    heroTitle.style.transform = "translateY(20px)";
+    window.onload = () => {
+      setTimeout(() => {
+        heroTitle.style.transition = "opacity 2s ease, transform 2s ease";
+        heroTitle.style.opacity = 1;
+        heroTitle.style.transform = "translateY(0)";
+      }, 500);
+    };
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
