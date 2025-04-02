@@ -16,7 +16,6 @@ This portfolio serves as a showcase of my projects, skills, and experience. It i
 
 This project is licensed under the **MIT License**. You are free to use and modify it as needed.
 
-Suggestions for improvement are always welcome.  
 
 
 
